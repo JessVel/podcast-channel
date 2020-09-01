@@ -7,7 +7,7 @@ El desafío está enfocado en el maquetado de la landing page de un canal de Pod
 https://podcast-channel-nhfbtc465.vercel.app/
 
 ## Mobile version <br>
-![ScreenShot](https://raw.github.com/JessVel/podcast-channel/master/assets/Podcast-channel-mobile.png) 
+![ScreenShot](https://raw.github.com/JessVel/podcast-channel/master/assets/mobile.png) 
 
 
 ## Desktop version <br>
