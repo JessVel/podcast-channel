@@ -13,5 +13,5 @@ https://podcast-channel-nhfbtc465.vercel.app/
 <img src="https://i.ibb.co/LPKCM2q/podcast-channel-mobile.png">
 
 ## Desktop version <br>
-![ScreenShot](https://raw.github.com/JessVel/podcast-channel/master/assets/Podcast-Channel-desktop.png) 
+<img src="https://i.ibb.co/Wxyg81j/Podcast-Channel-desktop.png">
 
