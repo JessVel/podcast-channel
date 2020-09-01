@@ -58,7 +58,7 @@ $fontWhite: #fff;
   font-family: $fontIbmPlexSans;
   font-size: $fontSize-l;
   line-height: 42px;
-  font-weight: 300;
+  font-weight: 600;
   padding: 5%;
 }
 
@@ -93,9 +93,8 @@ header {
   position: fixed;
   z-index: 10;
   top: 0;
-  padding: 0 5px
+  padding: 0 5px;
 }
-
 
 .nav-menu {
   position: absolute;
@@ -119,17 +118,16 @@ header {
     flex-grow: 1;
   }
 
-  & .list-item a{
+  & .list-item a {
     display: block;
     padding: 15px 20px;
     text-decoration: none;
     color: $fontWhite;
     font-family: $fontIbmPlexMono;
   }
-
 }
 
-.burguer-menu .fa-bars{
+.burguer-menu .fa-bars {
   top: 14px;
   right: 16px;
   margin-right: 16px;
@@ -149,8 +147,10 @@ header {
 
 .container-title {
   justify-content: center;
- width: fit-content;
+  align-items: center;
+  width: fit-content;
   height: 100%;
+  width: 90%;
   margin-top: 100px;
   margin-left: 16px;
   margin-bottom: 16px;
@@ -159,7 +159,7 @@ header {
     font-family: $fontIbmPlexSans;
     font-size: $fontSize-l;
     line-height: 42px;
-    width: 80%;
+    width: 70%;
   }
 
   & span {
@@ -173,7 +173,6 @@ header {
     font-size: $fontSize-s;
     line-height: 24px;
     text-align: justify;
-    width: 80%;
     margin-top: 16px;
   }
 }
@@ -183,13 +182,20 @@ header {
   text-decoration: none;
   color: $textColor;
   padding: 13px 96px;
-  margin-left: 15px;
   margin-top: 20px;
+}
+
+.btn:hover {
+  @include btnHover();
+}
+
+.btn-main {
+  width: 100%;
 }
 
 .chapters {
   position: relative;
-  padding-top: 7rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
 }
 
@@ -199,7 +205,6 @@ header {
 }
 
 .chapters-items {
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -237,13 +242,13 @@ header {
   }
 
   & .description {
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
-    margin-left: 16px;
+    margin: 0 16px;
 
-    & .secondary-title{
+    & .secondary-title {
       color: $textColor;
     }
   }
@@ -263,7 +268,7 @@ header {
   }
 }
 
-.dark-title{
+.dark-title {
   color: $textColor;
   margin-top: 48px;
   margin-bottom: 14px;
@@ -273,218 +278,261 @@ header {
   display: grid;
   grid-template-columns: 1fr;
 
-  & img{
+  & img {
     width: 100%;
     height: 243px;
   }
 }
 
-.topics-container{
+.topics-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
 
-  & .topic{
+  & .topic {
     margin: 49px auto;
   }
 
-  & .topic-title{
+  & .topic-title {
     font-size: $fontSize-m;
     font-family: $fontIbmPlexSans;
     line-height: 32px;
     color: $textColor;
-    font-weight: 800;
+    font-weight: 600;
     margin: 10px 0;
   }
 }
 
 .container-news {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 341px;
+  width: 100%;
 
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: 341px;
-      width: 100%;
-  
-      & .secondary-title {
-        @include secondaryTitle();
-        color: $fontWhite;
-        text-align: center;
-        width: 80%;
-        margin-top: 30px;
-      }
-
-      & .bottom-polygon{
-        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
-      }
-  
-      & a {
-        @include btn();
-        color: $textColor;
-        margin: 30px 0;
-        padding: 10px;
-        width: 90%;
-        text-decoration: none;
-      }
-  
-      & a:hover {
-        @include btnHover();
-      }
-    }
-  
-    footer {
-      position: relative;
-      margin-bottom: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: $fontWhite;
-  
-      & p {
-        padding-top: 24px;
-        text-align: center;
-        font-size: $fontSize-xs;
-        color: $textColor;
-        font-family: $fontIbmPlexMono;
-        letter-spacing: 0;
-        line-height: 22px;
-      }
-    }
-  
-    .social-media {
-      display: flex;
-      justify-content: space-around;
-      margin: 5px;
-  
-      & i{
-        font-size: 16px;
-       
-        transition: 0.4s;
-        color: $textColor;
-        margin: 20px 0;
-      }
-
-      i:hover{
-        transform: rotate(360deg);
-      }
-  
-    }
-  
-    @media (min-width: 768px) { 
-
-     
-      .burguer-menu {
-        display: none;
-        width: 35px;
-        height: 35px;
-        padding: 10px;
-        right: 0;
-        border-right: 1px solid $fontWhite;
-
-        & :hover {
-          cursor: pointer;
-          background-color: rgba(0, 0, 0, 0.062);
-        }
-      }
-
-  
-      .nav-menu{
-        width: 100%;
-        margin-top: 0;
-        background-color: transparent;
-        position: fixed;
-      }
-
-      .menu-list {
-        flex-direction: row;
-        justify-content: flex-end;
-        margin-left: 100px;
-
-      
-        & .list-item {
-          text-align: end;
-          flex-grow: 0;
-        }
-      
-        & .list-item a {
-          display: inline-block;
-          text-decoration: none;
-          color: $textColor;
-          font-family: $fontIbmPlexMono;
-        }
-
-        .list-item a:hover {
-          color: rgba(0, 243, 187, 1);
-          transition: 0.3s ease;
-          text-decoration: line-through;
-        }
-      
-        & .list-item a:active {
-          color: rgba(6, 10, 36, 0.56);
-        }
-      
-     }
-
-     .chapters-items{
-      display: grid;
-      grid-template-columns: 50% 50%;
-      gap: 1.5rem;
-      padding-bottom: 0.9%;
-      margin: 1.5rem 3.4% 0;
+  & .secondary-title {
+    @include secondaryTitle();
+    color: $fontWhite;
+    text-align: center;
+    width: 80%;
+    margin-top: 30px;
   }
-  
-  .about-container{
+
+  & .bottom-polygon {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  & a {
+    @include btn();
+    color: $textColor;
+    margin: 30px 0;
+    padding: 10px;
+    width: 90%;
+    text-decoration: none;
+  }
+
+  & a:hover {
+    @include btnHover();
+  }
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $fontWhite;
+  padding: 0 45px;
+  margin-bottom: 5px;
+
+  & p {
+    padding-top: 24px;
+    text-align: center;
+    font-size: $fontSize-xs;
+    color: $textColor;
+    font-family: $fontIbmPlexMono;
+    letter-spacing: 0;
+    line-height: 22px;
+  }
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+
+  & i {
+    font-size: 16px;
+
+    transition: 0.4s;
+    color: $textColor;
+    margin: 20px 0;
+  }
+
+  i:hover {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .burguer-menu {
+    display: none;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    right: 0;
+    border-right: 1px solid $fontWhite;
+
+    & :hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.062);
+    }
+  }
+
+  .container-title {
+    margin-left: 5%;
+    width: 80%;
+
+    & h1 {
+      font-size: $fontSize-xxl;
+      width: 100%;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    & .paragraph-mobile {
+      display: none;
+    }
+
+    & .paragraph-desktop {
+      display: block;
+      width: 70%;
+      font-family: $fontIbmPlexMono;
+      font-size: $fontSize-s;
+      line-height: 24px;
+      text-align: justify;
+      margin-top: 16px;
+    }
+
+    & .btn {
+      padding: 15px 30px;
+    }
+    & .btn-main {
+      width: 30%;
+    }
+  }
+
+  .description {
+    margin-left: 0;
+    width: 50%;
+  }
+
+  .secondary-title {
+    padding: 0 0 0 5%;
+  }
+
+  .chapters {
+    padding-top: 12rem;
+  }
+
+  .nav-menu {
+    width: 100%;
+    margin-top: 0;
+    background-color: transparent;
+    position: fixed;
+  }
+
+  .menu-list {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 100px;
+
+    & .list-item {
+      text-align: end;
+      flex-grow: 0;
+    }
+
+    & .list-item a {
+      display: inline-block;
+      text-decoration: none;
+      color: $textColor;
+      font-family: $fontIbmPlexMono;
+    }
+
+    .list-item a:hover {
+      color: rgba(0, 243, 187, 1);
+      transition: 0.3s ease;
+      text-decoration: line-through;
+    }
+
+    & .list-item a:active {
+      color: rgba(6, 10, 36, 0.56);
+    }
+  }
+
+  .chapters-items {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 1.5rem;
+    padding-bottom: 0.9%;
+    margin: 1.5rem 3.4% 0;
+  }
+
+  .about-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 
-
-.container-interviews{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.topics-container{
-  flex-direction: row;
-  margin: 0 100px;
-}
-
-.container-news a{
-  width: 40%;
-}
-
-.footer-container{
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 100px;
-
-  & .social-media{
-    display:flex;
+  .container-interviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
-  & .social-media a{
-     margin: 0 20px;
+  .topics-container {
+    flex-direction: row;
+    margin: 0 100px;
   }
-}
 
-.bg-polygon.bottom-polygon.bottom-poly-deskt{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
-  z-index: -1;
-  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
-}
+  .container-news a {
+    width: 40%;
+    padding: 15px 30px;
+  }
+
+  .footer-container {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 100px;
+
+    & .social-media {
+      display: flex;
     }
 
+    & .social-media a {
+      margin: 0 20px;
+    }
+  }
+
+  .bg-polygon {
+    clip-path: polygon(0 15%, 100% 0, 100% 95%, 0% 100%);
+    height: 1000px;
+  }
+
+  .bg-polygon.bottom-polygon.bottom-poly-deskt {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+    z-index: -1;
+    clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
+  }
+}

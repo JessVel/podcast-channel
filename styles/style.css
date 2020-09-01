@@ -109,10 +109,14 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
+  width: 90%;
   margin-top: 100px;
   margin-left: 16px;
   margin-bottom: 16px;
@@ -122,7 +126,7 @@ header {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 36px;
   line-height: 42px;
-  width: 80%;
+  width: 70%;
 }
 
 .container-title span {
@@ -136,7 +140,6 @@ header {
   font-size: 16px;
   line-height: 24px;
   text-align: justify;
-  width: 80%;
   margin-top: 16px;
 }
 
@@ -151,13 +154,21 @@ header {
   text-decoration: none;
   color: #060a24;
   padding: 13px 96px;
-  margin-left: 15px;
   margin-top: 20px;
+}
+
+.btn:hover {
+  background-image: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+  color: #fff;
+}
+
+.btn-main {
+  width: 100%;
 }
 
 .chapters {
   position: relative;
-  padding-top: 7rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
 }
 
@@ -165,7 +176,7 @@ header {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 36px;
   line-height: 42px;
-  font-weight: 300;
+  font-weight: 600;
   padding: 5%;
   color: #fff;
 }
@@ -236,7 +247,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 16px;
+  margin: 0 16px;
 }
 
 .about-container .description .secondary-title {
@@ -300,7 +311,7 @@ header {
   font-family: "IBM Plex Sans", sans-serif;
   line-height: 32px;
   color: #060a24;
-  font-weight: 800;
+  font-weight: 600;
   margin: 10px 0;
 }
 
@@ -324,7 +335,7 @@ header {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 36px;
   line-height: 42px;
-  font-weight: 300;
+  font-weight: 600;
   padding: 5%;
   color: #fff;
   text-align: center;
@@ -359,7 +370,6 @@ header {
 
 footer {
   position: relative;
-  margin-bottom: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,6 +381,8 @@ footer {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #fff;
+  padding: 0 45px;
+  margin-bottom: 5px;
 }
 
 footer p {
@@ -417,6 +429,44 @@ footer p {
   .burguer-menu :hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.062);
+  }
+  .container-title {
+    margin-left: 5%;
+    width: 80%;
+  }
+  .container-title h1 {
+    font-size: 64px;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .container-title .paragraph-mobile {
+    display: none;
+  }
+  .container-title .paragraph-desktop {
+    display: block;
+    width: 70%;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+    margin-top: 16px;
+  }
+  .container-title .btn {
+    padding: 15px 30px;
+  }
+  .container-title .btn-main {
+    width: 30%;
+  }
+  .description {
+    margin-left: 0;
+    width: 50%;
+  }
+  .secondary-title {
+    padding: 0 0 0 5%;
+  }
+  .chapters {
+    padding-top: 12rem;
   }
   .nav-menu {
     width: 100%;
@@ -494,6 +544,7 @@ footer p {
   }
   .container-news a {
     width: 40%;
+    padding: 15px 30px;
   }
   .footer-container {
     margin-bottom: 0;
@@ -516,6 +567,11 @@ footer p {
   }
   .footer-container .social-media a {
     margin: 0 20px;
+  }
+  .bg-polygon {
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 95%, 0% 100%);
+            clip-path: polygon(0 15%, 100% 0, 100% 95%, 0% 100%);
+    height: 1000px;
   }
   .bg-polygon.bottom-polygon.bottom-poly-deskt {
     width: 100%;
